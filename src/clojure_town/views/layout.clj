@@ -13,4 +13,5 @@
          [:div.container
          [:header
          [:h1 "Clojure Town"]
-         content]]]))
+         content]]
+         [:script {:src "/submit.js"}]]))

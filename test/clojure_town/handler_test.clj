@@ -7,16 +7,7 @@
   (testing "main route"
     (let [response (app (mock/request :get "/"))]
       (is (= (:status response) 200))
-      (is (re-find #"DID YOU SAY SOMETHING ABOUT ME\?" (:body response)))))
-
-  (testing "post name route"
-    (let [response (app (mock/request :post "/" {:text "Peter" :__anti-forgery-token "value"}))]
-      (is (= (:status response) 302))))
-
-  (testing "name route"
-    (let [response (app (mock/request :get "/Peter"))]
-      (is (= (:status response) 200))
-      (is (re-find #"DID YOU SAY SOMETHING ABOUT PETER\?" (:body response)))))
+      (is (re-find #"Clojure Town" (:body response)))))
 
   (testing "not-found route"
     (let [response (app (mock/request :get "/invalid/route"))]
