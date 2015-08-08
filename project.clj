@@ -5,7 +5,8 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [compojure "1.3.1"]
                  [ring/ring-defaults "0.1.2"]
-                 [hiccup "1.0.5"]]
+                 [hiccup "1.0.5"]
+                 [markdown-clj "0.9.67"]]
   :plugins [[lein-ring "0.8.13"]]
   :ring {:handler clojure-town.handler/app}
   :profiles

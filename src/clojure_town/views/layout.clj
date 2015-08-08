@@ -13,7 +13,4 @@
          [:div.container
          [:header
          [:h1 "Clojure Town"]
-         [:form
-         [:div.form-group [:label {:for "text"} "Say something to grandma:"]
-         [:input.form-control {:type "text" :name "text"}]]
-         [:input.btn.btn-success {:type "submit"}]] [:br] content]]]))
+         content]]]))
