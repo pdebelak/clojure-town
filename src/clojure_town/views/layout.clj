@@ -9,9 +9,11 @@
          [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
          [:title "Clojure Town"]]
          [:link {:rel "stylesheet" :href "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"}]
+         [:link {:rel "stylesheet" :href "app.css"}]
          [:body
          [:div.container
          [:header
          [:h1 "Clojure Town"]
          content]]
+         [:script {:src "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"}]
          [:script {:src "submit.js"}]]))

@@ -1,0 +1,8 @@
+#editor {
+  height: 500px;
+  max-height: 100%;
+}
+
+#md-target {
+  padding-top: 20px;
+}
