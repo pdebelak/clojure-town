@@ -10,7 +10,9 @@
   (layout (html [:div.row [:div.col-sm-6 [:form { :method "POST" :action "/" } (anti-forgery-field)
   [:div.form-group [:label {:for "text"} "Type text here:"]
   [:div#editor.form-control]]]]
-  [:div#md-target.col-sm-6 ]])))
+  [:div#md-target.col-sm-6 ]]
+  [:script {:src "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"}]
+  [:script {:src "submit.js"}])))
 
 (defn show
   [request]

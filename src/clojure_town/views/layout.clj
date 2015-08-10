@@ -13,7 +13,5 @@
          [:body
          [:div.container
          [:header
-         [:h1 "Clojure Town"]
-         content]]
-         [:script {:src "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"}]
-         [:script {:src "submit.js"}]]))
+         [:h1 "Clojure Town"]]
+         content]]))

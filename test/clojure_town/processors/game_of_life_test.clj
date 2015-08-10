@@ -5,11 +5,13 @@
 (deftest game-of-life
   (testing "next-step"
     (is (= (next-step [[0 0 0] [0 0 0] [0 0 0]]) [[0 0 0] [0 0 0] [0 0 0]]))
-    ;; (is (= (next-step [[1 1 1] [0 0 0] [0 0 0]]) [[0 1 0] [0 1 0] [0 0 0]]))
+    (is (= (next-step [[1 1 1] [0 0 0] [0 0 0]]) [[0 1 0] [0 1 0] [0 0 0]]))
     )
   (testing "live-neighbors"
     (is (= (live-neighbors 0 0 [[0 0 0] [0 0 0] [0 0 0]]) 0))
     (is (= (live-neighbors 0 0 [[1 0 0] [0 0 0] [0 0 0]]) 0))
     (is (= (live-neighbors 0 0 [[0 1 0] [0 0 0] [0 0 0]]) 1))
+    (is (= (live-neighbors 0 0 [[1 1 1] [1 1 1] [1 1 1]]) 3))
+    (is (= (live-neighbors 1 1 [[1 1 1] [1 1 1] [1 1 1]]) 8))
     )
   )

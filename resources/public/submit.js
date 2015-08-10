@@ -12,7 +12,7 @@
           outputArea.innerHTML = request.responseText;
         }
     }
-    request.open('POST', '/', true);
+    request.open('POST', '', true);
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     var textValue = editor.getValue();
     var forgeryValue = forgeryToken.value;
