@@ -4,6 +4,7 @@
   var editor = ace.edit("editor");
   editor.setTheme("ace/theme/xcode");
   editor.getSession().setMode("ace/mode/markdown");
+  editor.setKeyboardHandler("ace/keyboard/vim");
 
   editor.addEventListener('input', function(e) {
     var request = new XMLHttpRequest();
