@@ -3,10 +3,6 @@
   var outputArea = document.getElementById('life-container');
   var startButton = document.getElementById('start-button');
 
-  function hasClass(el, name) {
-    return new RegExp('(\\s|^)'+name+'(\\s|$)').test(el.className);
-  }
-
   var allLifeCells = document.getElementsByClassName('life-cell');
   for (var i=0,len=allLifeCells.length;i<len;i++) {
     allLifeCells[i].addEventListener('click', function(e) {
@@ -21,7 +17,7 @@
       var cells = [];
       var lifeCells = lifeRows[i].getElementsByClassName('life-cell');
       for (var j=0,len2=lifeCells.length;j<len2;j++) {
-        if (hasClass(lifeCells[j], 'alive')) {
+        if (lifeCells[j].classList.contains('alive')) {
           cells.push(1);
         } else {
           cells.push(0);
@@ -47,6 +43,6 @@
       var forgeryValue = forgeryToken.value;
       var data = '__anti-forgery-token=' + encodeURIComponent(forgeryValue) + '&' + 'board=' + encodeURIComponent(JSON.stringify(board));
       request.send(data);
-    }, 250);
+    }, 500);
   });
 })();
